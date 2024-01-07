@@ -6,11 +6,11 @@ class Filter extends Component {
     filterValue: '',
   };
 
-  componentDidMount() {
+   /* componentDidMount() {
     const storedFilter = localStorage.getItem('filterValue');
     if (storedFilter) {
       this.setState({ filterValue: storedFilter });
-      this.props.onChange(storedFilter); // Aktualizacja filtra w komponencie nadrzędnym
+      this.props.onChange(storedFilter);
     }
   }
 
@@ -18,9 +18,8 @@ class Filter extends Component {
     const { filterValue } = this.state;
     if (prevState.filterValue !== filterValue) {
       localStorage.setItem('filterValue', filterValue);
-      this.props.onChange(filterValue); // Aktualizacja filtra w komponencie nadrzędnym
-    }
-  }
+      this.props.onChange(filterValue);
+  } */
 
   handleChange = (e) => {
     const { value } = e.target;
