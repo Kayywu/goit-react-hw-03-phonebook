@@ -8,13 +8,13 @@ class ContactForm extends Component {
     number: '',
   };
 
-  componentDidMount() {
+ componentDidMount() {
     const storedName = localStorage.getItem('contactName');
     const storedNumber = localStorage.getItem('contactNumber');
     if (storedName && storedNumber) {
       this.setState({ name: storedName, number: storedNumber });
     }
-  }
+  } 
 
   componentDidUpdate(prevProps, prevState) {
     const { name, number } = this.state;
@@ -22,7 +22,7 @@ class ContactForm extends Component {
       localStorage.setItem('contactName', name);
       localStorage.setItem('contactNumber', number);
     }
-  }
+  } 
 
 
   handleChange = (e) => {

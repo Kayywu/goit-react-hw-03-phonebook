@@ -12,14 +12,14 @@ class Filter extends Component {
       this.setState({ filterValue: storedFilter });
       this.props.onChange(storedFilter);
     }
-  }
+  } */
 
   componentDidUpdate(prevProps, prevState) {
     const { filterValue } = this.state;
-    if (prevState.filterValue !== filterValue) {
-      localStorage.setItem('filterValue', filterValue);
+    if (prevState.fliterValue !== filterValue) {
       this.props.onChange(filterValue);
-  } */
+  } 
+}
 
   handleChange = (e) => {
     const { value } = e.target;
@@ -28,7 +28,7 @@ class Filter extends Component {
 
 
   render() {
-    const { filterValue } = this.props;
+    const { filterValue } = this.state;
 
     return (
       <input
